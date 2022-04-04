@@ -7,10 +7,10 @@ body {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: "Century Gothic", Optima; /* Sets the font family of all h1 headings */
+    font-family: "Century Gothic"; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #37e1ff; 
+    color: #000; 
 }
 
 /* Heading 1 element hover effect */
@@ -27,10 +27,10 @@ h1:hover {
 
 /* Paragraph elements */
 p {
-    font-family: Georgia, Rockwell Extra Bold;
+    font-family: Arial;
     text-align: justify; /* Justify text within paragraph elements */
     letter-spacing: 1px; /* This expands the text slightly */
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 20px; /* Adds padding to the left of the paragraph element */
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
 }
@@ -54,7 +54,10 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: rgb(255, 0, 179); /* This ensures all links are blue */
+    color: rgb(0, 0, 0); /* This ensures all links are blue */
+    font-family: century gothic;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /* Quotation elements */
@@ -119,8 +122,11 @@ footer {
     color: black; /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Georgia, Helvetica; /* This specifies the font family for text on our navbar */
+    font-family: Century Gothic; /* This specifies the font family for text on our navbar */
     font-size: 20px; /* This specifies the font size for text on our navbar */
+    font-weight: bold;
+    transition-duration: 0.3s; /* This makes the transition last 1 second */
+    -webkit-transition-duration: 0.3s; /* For Safari 4.0-8.0 */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
@@ -143,14 +149,15 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4 transparent; /* Defines the background color that will display when you hover over the link */
+    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
     color: black; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    border-color: black;
 }
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: transparent;
+    background-color: #d8d7d7;
 }
 /***** END OF NAVBAR STYLING *****/
 
@@ -244,12 +251,12 @@ input[type=text] {
     margin-top: 6px; /* Adds a margin to the top of the text box */
     margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
     resize: vertical; /* This allows the user to resize the text boxes vertically */
-    font-family: Georgia, Century Gothic Bold;
+    font-family: arial, Century Gothic Bold;
 }
 
 /* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px #ff55e8 inset; /* This creates a blue shadow in the text box when hovered over by the user */
+    box-shadow: 0 0 5px #d8d7d7 inset; /* This creates a blue shadow in the text box when hovered over by the user */
 }
 
 /***** Contact Form Styling *****/
@@ -259,7 +266,7 @@ input[type=text]:hover {
     bottom: 1.75vw; /* Positions the button slightly up from the bottom of the viewport */
     right: 1.75vw; /* Positions the viewport slightly right from the side of the viewport */
     width: 25vw; /* Sets the width relative to the viewport width */
-    background-color: white; /* Sets the background color of the button to white */
+    background-color: #d8d7d7; /* Sets the background color of the button to white */
     color: black; /* Sets the color of the button text to black */
     border: solid black; /* This makes a solid black border around the button */
     cursor: pointer; /* This changes the cursor when hovered over the button to a pointer */
@@ -292,6 +299,7 @@ input[type=text]:hover {
     max-width: 49vw; /* Relative sizing of the form container - 49% of the viewport width */
     padding: 1vw; /* Adds padding between the form-popup and the form-container */
     background-color: white; 
+    font-family: "Century Gothic", Arial;   
 }
 
 /* Input fields */
@@ -302,11 +310,12 @@ input[type=text]:hover {
     border: none; /* Removes the border from the input boxes */
     background: Gainsboro; /* Sets the background color of the input boxes */
     font-size: 1vw; /* Relative font sizing based on the width of the viewport */
+    
 }
 
 /* General styling for all buttons */
 button {
-    font-family: "Trebuchet MS", Optima;
+    font-family: "Century Gothic", Arial;
     letter-spacing: .3vw; /* Adds slight spacing between the letters */
     font-size: 1.5vw; /* Relative sizing of text */
     font-weight: bold; 
@@ -318,16 +327,17 @@ button {
 
 /* Hover effect for contact and submit buttons */
 button:hover, .form-container .btn:hover {
-    color: white; /* This makes the text in the buttons white when hovered over */
-    background-color: #37e1ff; /* The background of the button changes to black when hovered over */
-    transition-duration: 1s; /* This makes the transition last 1 second */
-    -webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+    color: #000; /* This makes the text in the buttons black when hovered over */
+    background-color: #fff; /* The background of the button changes to black when hovered over */
+    transition-duration: 0.3s; /* This makes the transition last 1 second */
+    -webkit-transition-duration: 0.3s; /* For Safari 4.0-8.0 */
     border-color: silver; /* The border turns silver when the button is hovered over */
+    font-family: "Century Gothic", Arial;
 }
 
 /* Submit button */
 .form-container .btn {
-    background-color: white; 
+    background-color: #d8d7d7; 
     color: black;
     border-color: black;
     margin-bottom: 1vh; /* Adds space between the submit button and the close button */
@@ -335,18 +345,18 @@ button:hover, .form-container .btn:hover {
 
 /* Close button */
 .form-container .cancel {
-    background-color: black;
-    color: white;
-    border-color: gray;
+    background-color: #d8d7d7;
+    color: black;
+    border-color: black;
 }
 
 /* Styling for close button on hover */
 .form-container .cancel:hover {
-    color: white;
-    background-color: #ff55e8;
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    border-color: black;
+    color: black;
+    background-color: #fff;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    border-color: silver;
 }
 /***** End of Contact Form Styling *****/
 
@@ -416,7 +426,7 @@ button:hover, .form-container .btn:hover {
     bottom: 0; /* This property sets the text at the bottom of the image */
     width: 100%; /* The element covers the full width of the image */
     text-align: center; /* The text is center aligned within the image */
-    font-family: Perpetua, Rockwell Extra Bold;
+    font-family: Century Gothic;
     letter-spacing: .1vw; /* This gives slight spacing between the letters */
     font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
     background-color: rgba(0, 0, 0, 0.75); /* Gives a slightly transparent black background */
