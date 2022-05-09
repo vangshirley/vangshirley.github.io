@@ -1,4 +1,4 @@
-/***** GENERAL STYLING *****/
+
 /* Body */
 body {
     margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
@@ -6,7 +6,7 @@ body {
 
 /* Heading 1 elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
+    text-transform: uppercase; 
     font-family: "Century Gothic"; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
@@ -186,8 +186,7 @@ footer {
     width: 100%; /* Ensures the video-text container fills the width of the video */
     padding: 50px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
@@ -399,7 +398,7 @@ button:hover, .form-container .btn:hover {
     top: 50%; /* This moves the buttons up in the slideshow container */
     width: auto; /* The width of the buttons is automatically adjusted based on the content */
     padding: 2vw; /* Adds padding equal to 2% of the viewport width */
-    color: darkgray; 
+    color: rgb(0, 0, 0); 
     font-weight: bold;
     font-size: 1.5vw;
     border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
@@ -415,7 +414,7 @@ button:hover, .form-container .btn:hover {
 
 /* Hover effect on slide show buttons */
 .Previous:hover, .Next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Makes the background of the arrows a transparent gray color */
+    background-color: rgba(172, 132, 1, 0.3); /* Makes the background of the arrows a transparent gray color */
     color: white; /* Makes the arrows white when hovered over */
 }
 
@@ -450,7 +449,7 @@ button:hover, .form-container .btn:hover {
 
 /* Hover effect for slideshow dots */
 .active, .dot:hover {
-    background-color: black; /* Sets the color of the dots when active or hovered over */
+    background-color: #D49E8D; /* Sets the color of the dots when active or hovered over */
 }
 
 /* Fading animation for slideshow */
@@ -481,7 +480,7 @@ button:hover, .form-container .btn:hover {
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 1.6%;
-    height: 450px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+    height: 500px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #faf6f2; /* Sets the background color of the left columns */
 }
 
@@ -489,7 +488,7 @@ button:hover, .form-container .btn:hover {
     float: left;
     width: 50%;
     padding: 1.6%;
-    height: 450px;
+    height: 500px;
     background-color: #ded1bd;
 }
 
@@ -500,3 +499,62 @@ button:hover, .form-container .btn:hover {
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
 /***** End of Table Styling *****/
+
+/*DESIGN ANIMATION */
+
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+                
+.text-focus-in {
+    -webkit-animation: text-focus-in 4s;
+    font-family: 'Century Gothic';
+    font-size: 400%;
+    text-align: center;
+}
+
+
+/* slideshow port */
+
+  /* SLIDESHOW */
+
+/*design slide */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .slider-container {
+    position: absolute;
+    top: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 400px;
+    overflow: hidden;
+    cursor: grab;
+  }
+  .slider {
+    position: absolute;
+    top: 0;                                           
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*we have 4 imgs so repeat 10 times 1 fr*/
+    column-gap: 0rem;
+    pointer-events: none;
+  }
+  .slider-item {
+    width: 300px;
+    height: 100%;
+  }
+  .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+  } 
+  
+
+  
