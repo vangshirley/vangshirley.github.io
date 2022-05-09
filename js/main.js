@@ -43,5 +43,3 @@ function closeForm() {
             closeForm()
         }
     }, false )
-
-    
