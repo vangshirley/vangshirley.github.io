@@ -68,7 +68,7 @@ q {
 img {   
     filter: grayscale(0%); /* This rids our pictures of 75% of their color */
     max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 340px; /* Sets the height of all images */
+    height: 600px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
@@ -105,7 +105,9 @@ footer {
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
-}   
+    -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
+    animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
+}
 
 
 /* Navbar links */
@@ -122,10 +124,14 @@ footer {
     -webkit-transition-duration: 0.3s; /* For Safari 4.0-8.0 */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 2.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 3.75s; /* Applies the moveNavText animation for 5.75s */ 
+
 }
 
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
 
 /* Screens 576px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 576px) {
@@ -135,7 +141,7 @@ footer {
     }
 }
 
-/* Navbar hover effects */   
+/* Navbar hover effects */
 .Navbar a:hover {
     background-color: #ac84014d; /* Defines the background color that will display when you hover over the link */
     color: black; /* This defines the font color that will display when navbar a elements are hovered over */
