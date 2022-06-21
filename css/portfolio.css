@@ -426,7 +426,7 @@ button:hover, .form-container .btn:hover {
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 1.6%;
     height: 500px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #faf6f2; /* Sets the background color of the left columns */
+    background-color: #ded1bd; /* Sets the background color of the left columns */
 }
 
 .Column_2 {
@@ -452,7 +452,7 @@ button:hover, .form-container .btn:hover {
     width: 100%;
     padding: 1.6%;
     height: infinite;
-    background-color: #ded1bd;
+    background-color: #faf6f2;
 }
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
