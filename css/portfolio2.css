@@ -7,7 +7,7 @@ body {
 h1 {
     text-transform: uppercase; 
     font-family: "Century Gothic"; /* Sets the font family of all h1 headings */
-    text-align: center; /* Centering all h1 elements */
+    text-align: left; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #683b2b; 
 }
@@ -428,7 +428,7 @@ button:hover, .form-container .btn:hover {
 } 
 
 .Column_1 {
-    float: left;
+    float: right;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 1.6%;
     height: 500px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
